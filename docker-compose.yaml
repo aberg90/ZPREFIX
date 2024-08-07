@@ -47,7 +47,7 @@ services:
     volumes:
       - type: bind
         source: ./client
-        target: /app
+        target: /src
 
 # networks:
 #   inventory_network:
