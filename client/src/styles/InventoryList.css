@@ -1,0 +1,115 @@
+.quantity-center {
+  text-align: center;
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: -15px;
+  position: relative;
+  top: -40px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #2e3235;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #55708b;
+}
+
+.current-inventory {
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.login-button {
+  padding: 8px 16px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #2980b9;
+}
+
+.details-button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.details-button:hover {
+  background-color: #2980b9;
+}
+
+.inventory-list {
+  background-color: #2e3235;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+.item {
+  background-color: #283747;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.item h2 {
+  color: #3498db;
+}
+
+.item p {
+  font-size: 0.9em;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.description-title {
+  font-weight: bold;
+}
+
+
+button {
+  padding: 8px 16px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
