@@ -1,33 +1,14 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-module.exports = {
-  compose: {
-    client: "pg",
-    connection: {
-      host: "db",
-      port: "5432",
-      user: "postgres",
-      password: "docker",
-      database: "hardwareinv",
-    },
-    migrations: {
-      directory: './migrations',
-    },
-    seeds: {
-      directory: './seeds',
-    },
-  },
+require('dotenv').config();
 
+const { DB_CONNECTION_STRING } = process.env;
+
+module.exports = {
   development: {
     client: "pg",
-    connection: {
-      host: "127.0.0.1",
-      port: "5432",
-      user: "postgres",
-      password: "docker",
-      database: "hardwareinv",
-    },
+    connection: DB_CONNECTION_STRING,
     migrations: {
       directory: './migrations',
     },
@@ -35,9 +16,8 @@ module.exports = {
       directory: './seeds',
     },
   },
-
   staging: {
-    client: "postgresql",
+    client: "pg",
     connection: {
       database: "hardwareinv",
       user: "username",
@@ -55,9 +35,8 @@ module.exports = {
       directory: './seeds',
     },
   },
-
   production: {
-    client: "postgresql",
+    client: "pg",
     connection: {
       database: "hardwareinv",
       user: "username",
@@ -76,4 +55,3 @@ module.exports = {
     },
   },
 };
-
