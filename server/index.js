@@ -32,9 +32,9 @@ app.get('/users', (req, res) => {
 
 // Create item  WORKS
 app.post('/items', async (req, res) => {
-  const { User_id, item_name, description, quantity } = req.body;
+  const { User_id, item_name, description, quantity, material, size } = req.body;
   try {
-    const newItem = await knex('Item').insert({ User_id, item_name, description, quantity }, '*');
+    const newItem = await knex('Item').insert({ User_id, item_name, description, quantity, material, size }, '*');
     res.status(201).json(newItem);
   } catch (error) {
     res.status(500).json({ error: "Error creating Items" });
@@ -51,6 +51,40 @@ app.get('/items', async (req, res) => {
     res.status(500).json({ error: "Error retrieving Items" });
   }
 });
+
+
+// read specific item by ID  WORKS
+app.get('/items/:id', async (req, res) => {
+  try {
+    const itemId = parseInt(req.params.id, 10);
+    const item = await knex('Item').where('id', itemId).first();
+
+    if (item) {
+      res.json(item);
+    } else {
+      res.status(404).json({ error: "Item not found" });
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Error retrieving item" });
+  }
+});
+
+// Read specific item by item_name WORKS
+app.get('/items/name/:item_name', async (req, res) => {
+  try {
+    const { item_name } = req.params;
+    const item = await knex('Item').where('item_name', item_name).first();
+
+    if (item) {
+      res.json(item);
+    } else {
+      res.status(404).json({ error: "Item not found" });
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Error retrieving item" });
+  }
+});
+
 
 // Update item  WORKS
 app.patch('/items/:id', async (req, res) => {

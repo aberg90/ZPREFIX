@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/InventoryList.css';
+import { useNavigate } from 'react-router-dom';
+
 
 const InventoryList = () => {
   const [items, setItems] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const baseUrl = `http://localhost:8080/items`;
@@ -15,6 +18,7 @@ const InventoryList = () => {
         return res.json();
       })
       .then(data => {
+        console.log('Fetched items:', data);
         setItems(data);
       })
       .catch(error => {
@@ -22,6 +26,9 @@ const InventoryList = () => {
       });
 }, [])
 
+const handleLogin = () => {
+  navigate('/login');
+};
 
 // const InventoryList = () => {
 //   const items = [
@@ -34,14 +41,14 @@ const InventoryList = () => {
     <div>
       <div className="header">
         <h1>Inventory Management System</h1>
-        <button className="login-button">Login</button>
+        <button className="login-button2" onClick={handleLogin}>Login</button>
       </div>
       <h2 className="current-inventory">Current Inventory</h2>
       <div className="inventory-list">
         {items.map(item => (
           <div key={item.id} className="item">
             <div className="item-header">
-              <h2>{item.name}</h2>
+              <h2>{item.item_name || 'Unicorn'}</h2>
               <button className="details-button">View Details</button>
             </div>
             <div className="quantity-center">Quantity: {item.quantity}</div>

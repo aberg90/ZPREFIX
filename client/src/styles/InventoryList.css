@@ -4,7 +4,7 @@
   color: #ffffff;
   padding: 5px 10px;
   border-radius: 5px;
-  margin-top: -15px;
+  margin-top: -10px;
   position: relative;
   top: -40px;
   width: fit-content;
@@ -25,7 +25,7 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #55708b;
+  background-color: #1e252c;
 }
 
 .current-inventory {
@@ -34,7 +34,7 @@ body, html {
   color: #ffffff;
 }
 
-.login-button {
+.login-button2 {
   padding: 8px 16px;
   background-color: #3498db;
   border: none;
@@ -43,7 +43,7 @@ body, html {
   cursor: pointer;
 }
 
-.login-button:hover {
+.login-button2:hover {
   background-color: #2980b9;
 }
 
