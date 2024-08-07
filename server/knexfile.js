@@ -8,7 +8,7 @@ const { DB_CONNECTION_STRING } = process.env;
 module.exports = {
   development: {
     client: "pg",
-    connection: DB_CONNECTION_STRING,
+    connection: DB_CONNECTION_STRING || 'postgresql://postgres:docker@localhost:5432/hardwareinv',  // OR necessary to edit mig and seeds on other computers
     migrations: {
       directory: './migrations',
     },
@@ -55,3 +55,4 @@ module.exports = {
     },
   },
 };
+
