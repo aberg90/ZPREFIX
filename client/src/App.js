@@ -19,36 +19,6 @@
 
 // export default App;
 
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-// import { AuthProvider } from './components/AuthContext';
-// import LoginPage from './components/LoginPage';
-// import RegisterPage from './components/RegisterPage';
-// import InventoryList from './components/InventoryList';
-// import ItemDetails from './components/ItemDetails';
-// import ItemForm from './components/ItemForm';
-// import CreateForm from './components/CreateForm';
-
-// function App() {
-//   return (
-//     <AuthProvider>
-//       <Router>
-//         <Routes>
-//           <Route path="/login" element={<LoginPage />} />
-//           <Route path="/register" element={<RegisterPage />} />
-//           <Route path="/items/new" element={<ItemForm />} />
-//           <Route path="/items/name/:item_name" element={<ItemDetails />} />
-//           <Route path="/items" element={<InventoryList />} />
-//           <Route path="/items/new" element={<CreateForm />} />
-//           <Route path="/" element={<Navigate replace to="/items" />} />
-//         </Routes>
-//       </Router>
-//     </AuthProvider>
-//   );
-// }
-
-// export default App;
-
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
@@ -57,7 +27,8 @@ import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import InventoryList from './components/InventoryList';
 import ItemDetails from './components/ItemDetails';
-import CreateForm from './components/CreateForm'; // Import only the component you want to use for creation
+import CreateForm from './components/CreateForm';
+import ItemEditForm from './components/ItemForm';
 
 function App() {
   return (
@@ -66,8 +37,9 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="/items/new" element={<CreateForm />} /> {/* Ensure this route points to the correct component */}
+          <Route path="/items/new" element={<CreateForm />} />
           <Route path="/items/name/:item_name" element={<ItemDetails />} />
+          <Route path="/items/edit/:id" element={<ItemEditForm />} />
           <Route path="/items" element={<InventoryList />} />
           <Route path="/" element={<Navigate replace to="/items" />} />
         </Routes>

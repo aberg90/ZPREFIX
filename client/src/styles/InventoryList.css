@@ -1,3 +1,11 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e252c;
+}
+
 .quantity-center {
   text-align: center;
   background-color: #3498db;
@@ -12,28 +20,12 @@
   margin-right: auto;
 }
 
-
-body,
-html {
+body, html {
   height: 100%;
   margin: 0;
   background-color: #2e3235;
   color: #ffffff;
   font-family: Arial, sans-serif;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #1e252c;
-}
-
-.current-inventory {
-  text-align: center;
-  margin-top: 20px;
-  color: #ffffff;
 }
 
 .login-button2 {
@@ -49,17 +41,10 @@ html {
   background-color: #2980b9;
 }
 
-.details-button {
-  padding: 10px 20px;
-  background-color: #3498db;
-  border: none;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.details-button:hover {
-  background-color: #2980b9;
+.current-inventory {
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
 }
 
 .inventory-list {
@@ -76,12 +61,10 @@ html {
   position: relative;
 }
 
-.item h2 {
-  color: #3498db;
-}
-
-.item p {
-  font-size: 0.9em;
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .item-info {
@@ -89,14 +72,10 @@ html {
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-}
+  }
 
-.description-title {
-  font-weight: bold;
-}
-
-button {
-  padding: 8px 16px;
+.item-buttons2 button {
+  padding: 10px 20px;
   background-color: #3498db;
   border: none;
   color: white;
@@ -106,16 +85,15 @@ button {
 
 button:hover {
   background-color: #2980b9;
+  }
+
+.quantity-center {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-.item-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.item-buttons {
-  display: flex;
-  gap: 10px;
-  margin-left: auto;
+.description-title {
+  font-weight: bold;
+  margin-top: 10px;
 }

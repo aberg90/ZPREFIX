@@ -67,7 +67,7 @@ const InventoryList = () => {
           <div key={item.id} className="item">
             <div className="item-header">
               <h2>{item.item_name || 'Unicorn'}</h2>
-              <div className="item-buttons">
+              <div className="item-buttons2">
                 <button onClick={() => handleViewDetails(item.item_name)}>View Details</button>
                 {user && (
                   <>
