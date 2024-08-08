@@ -139,19 +139,20 @@ app.post('/users/login', async (req, res) => {
       .first();
 
     if (!user) {
-      return res.status(400).send('Cannot find user');
+      return res.status(400).json({ message: 'Cannot find user' });
     }
 
     if (req.body.password === user.password_hash) {
-      res.send('Successful Login');
+      res.status(200).json({ user });
     } else {
-      res.send('Not Allowed');
+      res.status(401).json({ message: 'Not Allowed' });
     }
   } catch (error) {
     console.error('Error logging in user:', error);
-    res.status(500).send('An error occurred while logging in');
+    res.status(500).json({ message: 'An error occurred while logging in' });
   }
 });
+
 
 /*--------------------------------------------------------------------------------*/
 

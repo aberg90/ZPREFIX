@@ -20,27 +20,31 @@
 // export default App;
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider } from './components/AuthContext';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import InventoryList from './components/InventoryList';
 import ItemDetails from './components/ItemDetails';
 import ItemForm from './components/ItemForm';
-import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
+    <AuthProvider>
       <Router>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="/items/new" element={<PrivateRoute><ItemForm /></PrivateRoute>} />
-          <Route path="/items/:id" element={<PrivateRoute><ItemDetails /></PrivateRoute>} />
+          <Route path="/items/new" element={<ItemForm />} />
+          <Route path="/items/name/:item_name" element={<ItemDetails />} />
           <Route path="/items" element={<InventoryList />} />
           <Route path="/" element={<Navigate replace to="/items" />} />
         </Routes>
       </Router>
+    </AuthProvider>
   );
 }
 
 export default App;
+
+

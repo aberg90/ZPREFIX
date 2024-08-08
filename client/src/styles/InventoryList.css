@@ -8,11 +8,13 @@
   position: relative;
   top: -40px;
   width: fit-content;
-  margin-left: auto;
+  margin-left: 120px;
   margin-right: auto;
-}
+  }
 
-body, html {
+
+body,
+html {
   height: 100%;
   margin: 0;
   background-color: #2e3235;
@@ -66,7 +68,6 @@ body, html {
   border-radius: 8px;
 }
 
-
 .item {
   background-color: #283747;
   border-radius: 5px;
@@ -94,7 +95,6 @@ body, html {
   font-weight: bold;
 }
 
-
 button {
   padding: 8px 16px;
   background-color: #3498db;
@@ -112,4 +112,10 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.item-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
 }

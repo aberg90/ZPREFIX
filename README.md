@@ -106,6 +106,8 @@ example request:
 
 GET all items: http://localhost:8080/items
 
+GET items by name: http://localhost:8080/items/name/nail
+
 POST items: http://localhost:8080/items
 
 ensure in the body, you select RAW and JSON
