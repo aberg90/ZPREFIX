@@ -1,6 +1,8 @@
 FROM node:alpine
 
-WORKDIR /src
+# WORKDIR /app
+ARG CLIENT_DIR=/src
+WORKDIR $CLIENT_DIR
 
 COPY package.json package-lock.json ./
 

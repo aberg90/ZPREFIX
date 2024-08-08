@@ -47,7 +47,10 @@ services:
     volumes:
       - type: bind
         source: ./client
-        target: /src
+        target: ${CLIENT_DIR}
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - CLIENT_DIR=${CLIENT_DIR}
 
 # networks:
 #   inventory_network:
