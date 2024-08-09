@@ -48,43 +48,44 @@ const InventoryList = () => {
     }
   };
 
-  return (
-    <div>
-      <div className="header">
-        <h1>Inventory Management System</h1>
-        {user ? (
-          <>
-            <button onClick={() => navigate('/items/new')}>Create</button>
-            <button onClick={logout} className="login-button2">Logout</button>
-          </>
-        ) : (
-          <button onClick={() => navigate('/login')} className="login-button2">Login</button>
-        )}
-      </div>
-      <h2 className="current-inventory">Current Inventory</h2>
-      <div className="inventory-list">
-        {items.map(item => (
-          <div key={item.id} className="item">
-            <div className="item-header">
-              <h2>{item.item_name || 'Unicorn'}</h2>
-              <div className="item-buttons2">
-                <button onClick={() => handleViewDetails(item.item_name)}>View Details</button>
-                {user && (
-                  <>
-                    <button onClick={() => navigate(`/items/edit/${item.id}`)}>Edit</button>
-                    <button onClick={() => handleDelete(item.id)}>Delete</button>
-                  </>
-                )}
-              </div>
-            </div>
-            <div className="quantity-center">Quantity: {item.quantity}</div>
-            <p className="description-title">Description:</p>
-            <p>{item.description.substring(0, 100)}{item.description.length > 100 ? "..." : ""}</p>
-          </div>
-        ))}
-      </div>
+
+return (
+  <div>
+    <div className="header">
+      <h1>Inventory Management System</h1>
+      {user ? (
+        <>
+          <button onClick={() => navigate('/items/new')}>Create</button>
+          <button onClick={logout} className="login-button2">Logout</button>
+        </>
+      ) : (
+        <button onClick={() => navigate('/login')} className="login-button2">Login</button>
+      )}
     </div>
-  );
+    <h2 className="current-inventory">Current Inventory</h2>
+    <div className="inventory-list">
+      {items.map(item => (
+        <div key={item.id} className={`item item-${item.id}`}>
+          <div className={`item-header item-header-${item.id}`}>
+            <h2>{item.item_name || 'Unicorn'}</h2>
+            <div className={`item-buttons2 item-buttons2-${item.id}`}>
+              <button onClick={() => handleViewDetails(item.item_name)}>View Details</button>
+              {user && (
+                <>
+                  <button onClick={() => navigate(`/items/edit/${item.id}`)}>Edit</button>
+                  <button onClick={() => handleDelete(item.id)}>Delete</button>
+                </>
+              )}
+            </div>
+          </div>
+          <div className={`quantity-center quantity-center-${item.id}`}>Quantity: {item.quantity}</div>
+          <p className={`description-title description-title-${item.id}`}>Description:</p>
+          <p>{item.description.substring(0, 100)}{item.description.length > 100 ? "..." : ""}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+);
 };
 
 export default InventoryList;
