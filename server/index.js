@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8080;
 const cors = require('cors');
-//const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 //const jwt = require('jsonwebtoken');
 const knex = require('knex')(require('./knexfile.js')[process.env.NODE_ENV || 'development']);
 
@@ -161,7 +161,7 @@ app.post('/users/login', async (req, res) => {
 //   knex('User')
 //   try {
 //     const salt = await bcrypt.genSalt()
-//     const hashedPassword = await bcrypt.hash(req.body.password, 10)
+//     const hashedPassword = await bcrypt.hash(req.body.password_hash, 10)
 //     const user = { username: req.body.username, password: hashedPassword }
 //     users.push(user)
 //     res.status(201).send()
