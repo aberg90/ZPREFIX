@@ -20,7 +20,7 @@ const CreateForm = () => {
       material,
       size,
     };
-
+    // calls to api to make a POST request for adding items in database
     fetch('http://localhost:8080/items', {
       method: 'POST',
       headers: {

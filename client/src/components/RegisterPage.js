@@ -24,7 +24,7 @@ const RegisterPage = () => {
       password,
       email,
     };
-
+    // calls to the api to make a post request for user registration
     fetch('http://localhost:8080/users/register', {
       method: 'POST',
       headers: {

@@ -16,7 +16,7 @@ const ItemDetails = () => {
   useEffect(() => {
     const fetchItemDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/items/name/${encodeURIComponent(item_name)}`);
+        const response = await fetch(`http://localhost:8080/items/name/${item_name}`);
         if (!response.ok) {
           throw new Error('Failed to fetch item details');
         }
@@ -30,9 +30,6 @@ const ItemDetails = () => {
     fetchItemDetails();
   }, [item_name]);
 
-  if (!itemDetails) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <div>
