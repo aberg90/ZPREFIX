@@ -220,5 +220,6 @@ You need to be sure you have the right item id, check the JSON data to see what 
 ![visitor page](client/public/assets/visitorpage.png "visitor page")
 ![login page](client/public/assets/loginpage.png "login page")
 ![register page](client/public/assets/registerpage.png "register page")
+![logged in](client/public/assets/userloggedin.png "logged ing")
 ![create item](client/public/assets/createitemform.png "create item")
 ![edit item](client/public/assets/edititemform.png "edit item")
