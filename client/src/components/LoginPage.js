@@ -21,6 +21,7 @@ const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  // calls to the api to make a post request for user login
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log('Login submitted!');

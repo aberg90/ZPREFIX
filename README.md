@@ -16,6 +16,12 @@ WHEN SPINNING UP THE APPLICATION, YOU MAY NOT BE ABLE TO AUTOMATICALLY SEE CHANG
 
 IN MY CASE, MY DESKTOP COMPUTER IS /src AND MY LAPTOP IS /app. ONCE DONE, DOCKER COMPOSE DOWN AND BACK UP.
 
+CLIENT: localhost:3000
+SERVER API: localhost:8080
+
+how to log in: use first data in database: aaron_berg
+password: password1
+
 ---------------------------------------------------App Features compaired to User Stories----------------------------------------------------
 - As an inventory manager I want to be able to create an account so that I can track my inventory.
 

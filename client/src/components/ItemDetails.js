@@ -30,6 +30,11 @@ const ItemDetails = () => {
     fetchItemDetails();
   }, [item_name]);
 
+  // this allows the page to wait for the data, if not, it breaks
+  if (!itemDetails) {
+    return <div>Loading...</div>;
+  }
+
 
   return (
     <div>
