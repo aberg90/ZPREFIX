@@ -215,10 +215,10 @@ DELETE item by ID: http://localhost:8080/items/7
 
 You need to be sure you have the right item id, check the JSON data to see what item ID it is.
 
-![database schema](public/assets/invschema.png "database schema")
-![wireframe](public/assets/basicpagedesign.png "wireframe")
-![visitor page](public/assets/visitorpage.png "visitor page")
-![login page](public/assets/loginpage.png "login page")
-![register page](public/assets/registerpage.png "register page")
-![create item](public/assets/createitemform.png "create item")
-![edit item](public/assets/edititemform.png "edit item")
+![database schema](client/public/assets/invschema.png "database schema")
+![wireframe](client/public/assets/basicpagedesign.png "wireframe")
+![visitor page](client/public/assets/visitorpage.png "visitor page")
+![login page](client/public/assets/loginpage.png "login page")
+![register page](client/public/assets/registerpage.png "register page")
+![create item](client/public/assets/createitemform.png "create item")
+![edit item](client/public/assets/edititemform.png "edit item")
