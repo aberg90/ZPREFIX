@@ -18,7 +18,7 @@ const ItemForm = () => {
   const [material, setMaterial] = useState('');
   const [size, setSize] = useState('');
   const navigate = useNavigate();
-  const { id } = useParams();
+  const { id } = useParams(); // to get the ID
 
   useEffect(() => {
     // This pulls the info from db and populates it in the form
@@ -36,7 +36,7 @@ const ItemForm = () => {
       });
   }, [id]);
 
-
+  // handles form submission
   const handleSubmit = (event) => {
     event.preventDefault();
 
